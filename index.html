@@ -358,53 +358,33 @@ return str;
 <style>
 
 #mainTable{
-  font-size: 16px;
-  font-family: '돋움', sans-serif;
-
-  width: 100%;        /* 화면에 맞춤 */
-  max-width: 480px;   /* 최대 480까지만 */
-
+  width: 100%;
+  max-width: 480px;
   margin: 0 auto;
+
   table-layout: fixed;
   border-collapse: separate;
-  border-spacing: 10px;
-}
-
+  border-spacing: 8px;
 }
 
 #leftField, #rightField{
   width: 50%;
-  height: 200px;
+
+  height: 42vw;
+  max-height: 220px;
   min-height: 160px;
 
   border: 1px solid #000;
   background: #ffffff;
   cursor: pointer;
 
-  padding: 10px;
+  padding: 12px;
   box-sizing: border-box;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
+  vertical-align: middle;
 
-  word-break: break-word;
-  overflow-wrap: break-word;
   overflow: hidden;
-
-  transition: background 0.1s ease;
-  -webkit-tap-highlight-color: transparent;
-}
-
-}
-
-}
- 
-
-  padding: 10px;
-  box-sizing: border-box;
-
   word-break: break-word;
   overflow-wrap: break-word;
 
@@ -421,6 +401,7 @@ return str;
   height: 70px;
   border: 1px solid #000;
 }
+
 
 </style>
 <meta name="generator" content="Namo WebEditor(Trial)">
@@ -457,6 +438,7 @@ showImage();
 
 </body>
 </html>
+
 
 
 
