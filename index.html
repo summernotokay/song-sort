@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <head>
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -429,15 +430,30 @@ return str;
     <p><font size="1" face="돋움"></font></p>
 
 </div>
+  <br>
+<button onclick="saveResultImage()" style="padding:8px 15px; font-size:14px;">
+이미지로 저장
+</button>
+
 <script type="text/javascript">
 <!--
 initList();
 showImage();
 //-->
+  function saveResultImage(){
+  html2canvas(document.getElementById("resultField")).then(function(canvas){
+    var link = document.createElement("a");
+    link.download = "겐지부_노래소트_결과.png";
+    link.href = canvas.toDataURL();
+    link.click();
+  });
+}
+
 </script>
 
 </body>
 </html>
+
 
 
 
