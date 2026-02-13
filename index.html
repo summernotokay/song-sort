@@ -360,19 +360,43 @@ return str;
 #mainTable{
   font-size: 16px;
   font-family: '돋움', sans-serif;
-  width: 480px;
+
+  width: 100%;        /* 화면에 맞춤 */
+  max-width: 480px;   /* 최대 480까지만 */
+
   margin: 0 auto;
   table-layout: fixed;
   border-collapse: separate;
   border-spacing: 10px;
 }
 
+}
+
 #leftField, #rightField{
   width: 50%;
-  height: 220px;
+
+  height: 45vw;      /* 모바일 대응 */
+  max-height: 220px; /* PC에서는 220px 유지 */
+
   border: 1px solid #000;
   background: #ffffff;
   cursor: pointer;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  word-break: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+}
+ 
 
   padding: 10px;
   box-sizing: border-box;
@@ -429,6 +453,7 @@ showImage();
 
 </body>
 </html>
+
 
 
 
