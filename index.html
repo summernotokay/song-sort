@@ -372,34 +372,17 @@ return str;
   width: 50%;
   height: 200px;
   font-size: 18px;
-  border: 2px solid #000;
+  border: 1px solid #000;   /* 선 얇게 */
   text-align: center;
   vertical-align: middle;
   background: #ffffff;
   cursor: pointer;
 
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-  box-shadow: 0 4px 0 #000;
-}
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  box-shadow: 0 3px 0 #000;
 
-#leftField:active, #rightField:active{
-  transform: translateY(4px) scale(0.97);
-  box-shadow: 0 0 0 #000;
-}
+  -webkit-tap-highlight-color: transparent; /
 
-.middleField{
-  width: 120px;
-  height: 70px;
-  border: 1px solid #000;
-}
-
-a{
-  text-decoration: none;
-}
-
-a:hover{
-  color:#99ccff;
-}
 </style>
 <meta name="generator" content="Namo WebEditor(Trial)">
 <meta http-equiv="content-type" content="text/html; charset=utf-8"></head>
@@ -438,6 +421,7 @@ showImage();
 
 </body>
 </html>
+
 
 
 
