@@ -2,6 +2,8 @@
 <html lang="ja">
 <head>
 <meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <title>겐지부 노래소트</title>
@@ -361,26 +363,26 @@ return str;
 
 **********************************************************/
 #mainTable{
-font-size: 12px;
+#mainTable{
+font-size: 16px;
 font-family: '돋움',sans-serif;
 text-align: center;
 vertical-align: middle;
-width: 410px;
+width: 95%;
+max-width: 500px;
+
 margin-left: auto;
 margin-right: auto;
 border-collapse: separate;
 border-spacing: 10px 5px;
 }
-#leftField{
-width: 120px;
-height: 150px;
+#leftField, #rightField{
+width: 45%;
+height: 180px;
+font-size: 16px;
 border: 1px solid #000;
 }
-#rightField{
-width: 120px;
-height: 150px;
-border: 1px solid #000;
-}
+
 .middleField{
 width: 120px;
 height: 70px;
@@ -433,3 +435,4 @@ showImage();
 
 </body>
 </html>
+
