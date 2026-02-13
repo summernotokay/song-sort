@@ -374,9 +374,8 @@ return str;
 
 #leftField, #rightField{
   width: 50%;
-
-  height: 45vw;      /* 모바일 대응 */
-  max-height: 220px; /* PC에서는 220px 유지 */
+  height: 200px;
+  min-height: 160px;
 
   border: 1px solid #000;
   background: #ffffff;
@@ -385,14 +384,19 @@ return str;
   padding: 10px;
   box-sizing: border-box;
 
-  word-break: break-word;
-  overflow-wrap: break-word;
-  overflow: hidden;
-
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  word-break: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+
+  transition: background 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
 }
 
 }
@@ -453,6 +457,7 @@ showImage();
 
 </body>
 </html>
+
 
 
 
