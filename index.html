@@ -323,6 +323,8 @@ sameRank = 1;
 str += "<\/table>";
 
 document.getElementById("resultField").innerHTML = str;
+document.getElementById("saveBtn").style.display = "inline-block";
+
 }
 
 //比較する２つ要素の?示+++++++++++++++++++++++++++++++++++
@@ -430,17 +432,23 @@ return str;
     <p><font size="1" face="돋움"></font></p>
 
 </div>
-  <br>
-<button onclick="saveResultImage()" style="padding:8px 15px; font-size:14px;">
+<br>
+<button id="saveBtn"
+        onclick="saveResultImage()"
+        style="padding:8px 15px; font-size:14px; display:none;">
 이미지로 저장
 </button>
+
 
 <script type="text/javascript">
 <!--
 initList();
 showImage();
 //-->
-  function saveResultImage(){
+</script>
+
+<script>
+function saveResultImage(){
   html2canvas(document.getElementById("resultField")).then(function(canvas){
     var link = document.createElement("a");
     link.download = "겐지부_노래소트_결과.png";
@@ -448,11 +456,12 @@ showImage();
     link.click();
   });
 }
-
 </script>
+
 
 </body>
 </html>
+
 
 
 
