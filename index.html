@@ -355,24 +355,21 @@ return str;
 }
 //-->
 </script>
-<style type="text/css">
 <style>
+
 #mainTable{
   font-size: 16px;
   font-family: '돋움', sans-serif;
-  text-align: center;
-  width: 95%;
-  max-width: 500px;
+  width: 480px;
   margin: 0 auto;
-
-  table-layout: fixed;      /* ★ 이게 핵심 */
+  table-layout: fixed;
   border-collapse: separate;
   border-spacing: 10px;
 }
 
 #leftField, #rightField{
-  width: 50%;               /* 항상 50% 고정 */
-  height: 220px;            /* 높이 완전 고정 */
+  width: 50%;
+  height: 220px;
   border: 1px solid #000;
   background: #ffffff;
   cursor: pointer;
@@ -380,7 +377,7 @@ return str;
   padding: 10px;
   box-sizing: border-box;
 
-  word-break: break-word;   /* 긴 제목 자동 줄바꿈 */
+  word-break: break-word;
   overflow-wrap: break-word;
 
   transition: background 0.1s ease;
@@ -404,22 +401,19 @@ return str;
 <body text="#000000" bgcolor="#ffffff" link="#0099ff" vlink="#0099ff" alink="#0099ff">
 <table id="mainTable" align="center">
 <tr>
-        <td id="battleNumber" colspan="2" style="padding-bottom: 10px;">
+        <td id="battleNumber" colspan="2" style="padding-bottom: 10px; text-align:center;">
             <p>&nbsp;</p>
         </td>
 </tr>
 <tr>
-<td id="leftField" onClick="if(finishFlag==0)sortList(-1);">
-&nbsp;
-</td>
-<td id="rightField" onClick="if(finishFlag==0)sortList(1);">
-&nbsp;
-</td>
+  <td id="leftField" onClick="if(finishFlag==0)sortList(-1);">
+    &nbsp;
+  </td>
+  <td id="rightField" onClick="if(finishFlag==0)sortList(1);">
+    &nbsp;
+  </td>
 </tr>
-</td>
-</tr>
-<tr>
-</tr>
+
 </table><br><br>
 <div id="resultField" style="text-align:center;">
     <p><font size="1" face="돋움"><span style="">♡X:@summernotokay♡</font></p>
@@ -435,6 +429,7 @@ showImage();
 
 </body>
 </html>
+
 
 
 
