@@ -460,12 +460,12 @@ function saveResultImage(){
 
   html2canvas(target, {
     backgroundColor: "#ffffff",
-    scale: 2,   // 고화질
+    scale: 2,
     onclone: function(clonedDoc) {
 
       var clonedTable = clonedDoc.querySelector("#resultField table");
 
-      // 🔥 캡처할 때만 선을 0.5px로 줄임
+      // 🔥 선 얇게 유지 (캡처용만 0.5px)
       clonedTable.querySelectorAll("td").forEach(function(td){
         td.style.border = "0.5px solid #000";
       });
@@ -475,9 +475,25 @@ function saveResultImage(){
 
   }).then(function(canvas){
 
+    var padding = 30; // 👉 좌우 여백 크기 (원하면 20~50 조절 가능)
+
+    // 새 캔버스 생성
+    var newCanvas = document.createElement("canvas");
+    newCanvas.width = canvas.width + padding * 2;
+    newCanvas.height = canvas.height;
+
+    var ctx = newCanvas.getContext("2d");
+
+    // 배경 흰색
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, newCanvas.width, newCanvas.height);
+
+    // 기존 이미지 중앙 배치
+    ctx.drawImage(canvas, padding, 0);
+
     var link = document.createElement("a");
     link.download = "겐지부_노래소트_결과.png";
-    link.href = canvas.toDataURL("image/png");
+    link.href = newCanvas.toDataURL("image/png");
     link.click();
 
   });
@@ -488,6 +504,7 @@ function saveResultImage(){
 
 </body>
 </html>
+
 
 
 
