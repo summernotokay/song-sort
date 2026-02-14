@@ -456,23 +456,12 @@ showImage();
 <script>
 function saveResultImage(){
 
-  var original = document.querySelector("#resultField table");
+  var target = document.querySelector("#resultField table");
 
-  var clone = original.cloneNode(true);
-  clone.style.borderCollapse = "collapse";
-  clone.style.background = "#ffffff";
-
-  clone.querySelectorAll("td").forEach(function(td){
-    td.style.border = "1px solid #000";
-  });
-
-  document.body.appendChild(clone);
-  clone.style.position = "absolute";
-  clone.style.left = "-9999px";  // 화면 밖에 숨김
-
-  html2canvas(clone, {
+  html2canvas(target, {
     backgroundColor: "#ffffff",
-    scale: 3   // 화질 선명
+    scale: window.devicePixelRatio,
+    useCORS: true
   }).then(function(canvas){
 
     var link = document.createElement("a");
@@ -480,9 +469,9 @@ function saveResultImage(){
     link.href = canvas.toDataURL("image/png");
     link.click();
 
-    document.body.removeChild(clone); // 복사본 제거
   });
 }
+
 
 
 </script>
@@ -490,6 +479,7 @@ function saveResultImage(){
 
 </body>
 </html>
+
 
 
 
